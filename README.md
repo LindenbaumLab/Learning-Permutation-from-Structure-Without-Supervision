@@ -1,30 +1,25 @@
 # Learning Permutation from Structure Without Supervision
 
-Accepted to ICML 2026.
-
 ## Abstract
 
 Many learning problems require uncovering a hidden ordering that reveals structure in unordered data, such as monotonicity in sorting or spatial continuity in jigsaw reconstruction. In these settings, permutations can be learned as latent operators by optimizing objectives defined directly on the reordered output, often without access to ground-truth orderings. Differentiable relaxations such as Gumbel-Sinkhorn make this approach practical by approximating permutation matrices with doubly stochastic matrices. However, learning from structure without supervision induces a non-uniform uncertainty: some assignments become confident early, while others remain ambiguous. Existing methods control this process using a single global temperature, forcing all assignments to sharpen or diffuse simultaneously and leading to instability at scale. We introduce an entropy-adaptive formulation of Gumbel-Sinkhorn that locally modulates temperature based on assignment uncertainty. This allows confident assignments to discretize early while preserving exploration where uncertainty remains. Across sorting and jigsaw reconstruction tasks and in routing-style settings, adaptive entropy control improves training stability and final permutation quality relative to fixed-temperature baselines, particularly as problem size and assignment ambiguity increase.
-
-## Method Overview
 
 ![Method overview](method_overview.jpg)
 
 ## BibTeX
 
 ```bibtex
-@inproceedings{eisenberg2026learning,
+@inproceedings{eisenberg2026permlearn,
   title     = {Learning Permutation from Structure Without Supervision},
-  author    = {Ran Eisenberg and Ofir Lindenbaum},
+  author    = {Ran Eisenberg, Ofir Lindenbaum},
   booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
   year      = {2026},
-  note      = {Accepted to ICML 2026}
 }
 ```
 
 ## Repository Contents
 
-This folder contains the files needed to run the number-sorting benchmarks.
+This repository contains the files needed to run the number-sorting benchmarks.
 
 ## How to run
 
